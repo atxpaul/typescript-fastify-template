@@ -1,0 +1,22 @@
+{
+    "env": {
+      "node": true,
+      "es2021": true
+    },
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "google", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "ignorePatterns": ["/dist/**/*", "/tests/**/*"],
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
+      "import/no-unresolved": 0,
+      "require-jsdoc": 0,
+      "max-len": ["error", { "code": 120, "ignoreUrls": true }],
+      "camelcase": 0,
+      "new-cap": ["error", { "capIsNew": false }]
+    }
+  }
